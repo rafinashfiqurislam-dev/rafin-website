@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chat with AI — Rafin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap nav"><a class="logo" href="index.html">Rafin</a><div class="menu"><a href="index.html">Home</a><a href="explore.html">Explore Me</a><a href="services.html">Services</a><a class="active" href="ai.html">Chat with AI</a></div></div></nav>
+
+<main class="chatPage">
+  <div class="wrap chatWrap">
+    <div class="eyebrow">AI ASSISTANT</div>
+    <h1>Chat with <span>AI.</span></h1>
+    <div id="chatMessages" class="chatMessages">
+      <div class="assistantMessage">How can I help you today?</div>
+    </div>
+    <form id="chatForm" class="chatComposer">
+      <textarea id="chatInput" rows="1" placeholder="Message AI..." aria-label="Message AI"></textarea>
+      <button type="submit" aria-label="Send message" class="sendButton">↑</button>
+    </form>
+    <p id="chatStatus" class="chatStatus">AI responses are generated through the configured Gemini service.</p>
+  </div>
+</main>
+<footer><div class="wrap">Powered by nexort</div></footer>
+<script src="script.js"></script>
+<script>initChat();</script>
+</body>
+</html>

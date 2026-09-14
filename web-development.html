@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Website Development — Rafin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap nav"><a class="logo" href="index.html">Rafin</a><div class="menu"><a href="index.html">Home</a><a href="explore.html">Explore Me</a><a class="active" href="services.html">Services</a><a href="ai.html">Chat with AI</a></div></div></nav>
+
+<main class="formPage">
+  <div class="wrap formWrap">
+    <div class="eyebrow">WEBSITE DEVELOPMENT</div>
+    <h1>Tell me about your <span>project.</span></h1>
+    <form id="webForm" class="requestForm">
+      <label>Name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+      <label>Phone Number<input name="phone" required autocomplete="tel" placeholder="Your phone number"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label>Website Requirement<textarea name="about" required placeholder="Tell me what you want your website to do..."></textarea></label>
+      <button class="btn primary" type="submit">Next <span>→</span></button>
+    </form>
+  </div>
+</main>
+<footer><div class="wrap">Powered by nexort</div></footer>
+<script src="script.js"></script>
+<script>initRequestForm("webForm","website-development");</script>
+</body>
+</html>

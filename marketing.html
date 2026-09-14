@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Marketing — Rafin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap nav"><a class="logo" href="index.html">Rafin</a><div class="menu"><a href="index.html">Home</a><a href="explore.html">Explore Me</a><a class="active" href="services.html">Services</a><a href="ai.html">Chat with AI</a></div></div></nav>
+
+<main class="formPage">
+  <div class="wrap formWrap">
+    <div class="eyebrow">MARKETING</div>
+    <h1>Let's understand your <span>brand.</span></h1>
+    <form id="marketingForm" class="requestForm">
+      <label>Name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+      <label>Phone Number<input name="phone" required autocomplete="tel" placeholder="Your phone number"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label>Business / Brand Type
+        <select name="brand_type" id="brandType" required>
+          <option value="" selected disabled>Select a category</option>
+          <option value="Agency">Agency</option>
+          <option value="Business">Business</option>
+          <option value="Small Business">Small Business</option>
+          <option value="Other">Other</option>
+        </select>
+      </label>
+      <div id="otherWrap" class="otherWrap" hidden>
+        <label>Other Category<input id="otherCategory" name="other_category" placeholder="Write your category"></label>
+      </div>
+      <button class="btn primary" type="submit">Next <span>→</span></button>
+    </form>
+  </div>
+</main>
+<footer><div class="wrap">Powered by nexort</div></footer>
+<script src="script.js"></script>
+<script>initMarketingForm("marketingForm");</script>
+</body>
+</html>
