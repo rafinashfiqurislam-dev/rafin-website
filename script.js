@@ -181,11 +181,10 @@ function initChat(){
       });
 
       const result = await response.json();
-      if(!response.ok) throw new Error(result.error || "AI request failed.");
+            if(!response.ok) throw new Error(result.error || "AI request failed.");
       thinking.textContent = result.text || "I could not generate a response.";
       status.textContent = "Ready";
-    }{
-          }catch(err){
+    }catch(err){
       console.error("AI chat error:", err);
       thinking.textContent = `AI Error: ${err.message || "Unknown error"}`;
       status.textContent = "AI service error.";
