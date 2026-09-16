@@ -3,40 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Chat with AI — Rafin</title>
+  <title>Alpha AI — Rafin</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<nav><div class="wrap nav"><a class="logo" href="index.html">Rafin</a><div class="menu"><a href="index.html">Home</a><a href="explore.html">Explore Me</a><a href="services.html">Services</a><a class="active" href="ai.html">Chat with AI</a></div></div></nav>
 
 <main class="alphaChatPage">
+
   <header class="alphaHeader">
-    <a class="alphaBrand" href="index.html" aria-label="Rafin home">Rafin</a>
-    <div class="alphaTitle" aria-label="Alpha AI">
-      <span class="alphaLogo alphaLogoStatic" aria-hidden="true">
+    <a class="alphaBrand" href="index.html">Rafin</a>
+
+    <div class="alphaTitle">
+      <span class="alphaLogo" aria-hidden="true">
         <span class="alphaLogoCore"></span>
-        <span class="alphaLogoArc alphaLogoArcOne"></span>
-        <span class="alphaLogoArc alphaLogoArcTwo"></span>
+        <span class="alphaLogoArc"></span>
+        <span class="alphaLogoArcTwo"></span>
       </span>
+
       <span>Alpha AI</span>
     </div>
-    <div class="alphaHeaderSpacer" aria-hidden="true"></div>
+
+    <div class="alphaHeaderSpacer"></div>
   </header>
 
-  <section class="alphaConversation" aria-label="Alpha AI conversation">
+  <section class="alphaConversation">
     <div id="chatMessages" class="chatMessages"></div>
   </section>
 
   <div class="alphaComposerArea">
+
     <form id="chatForm" class="chatComposer">
-      <textarea id="chatInput" rows="1" placeholder="Message Alpha AI..." aria-label="Message Alpha AI"></textarea>
-      <button type="submit" aria-label="Send message" class="sendButton">↑</button>
+
+      <textarea
+        id="chatInput"
+        rows="1"
+        placeholder="Message Alpha AI..."
+        aria-label="Message Alpha AI"
+      ></textarea>
+
+      <button
+        type="submit"
+        aria-label="Send message"
+        class="sendButton"
+      >↑</button>
+
     </form>
-    <p id="chatStatus" class="chatStatus" aria-live="polite">Alpha AI can make mistakes. Check important information.</p>
+
+    <p
+      id="chatStatus"
+      class="chatStatus"
+      aria-live="polite"
+    ></p>
+
   </div>
+
 </main>
-<footer><div class="wrap">Powered by nexort</div></footer>
+
 <script src="script.js"></script>
-<script>initChat();</script>
+<script>
+  initChat();
+</script>
+
 </body>
 </html>
