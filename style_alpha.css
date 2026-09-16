@@ -1,0 +1,297 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--bg:#f4f1eb;--surface:#fbfaf7;--ink:#161616;--muted:#68655f;--line:#d9d5ce;--soft:#ebe7df;--shadow:0 24px 70px rgba(0,0,0,.08)}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.wrap{max-width:1120px;margin:auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(244,241,235,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:center;position:relative}
+.logo{position:absolute;left:50%;transform:translateX(-50%);font-size:22px;font-weight:900;letter-spacing:-.6px}
+.menu{position:absolute;right:24px;display:flex;gap:22px;font-size:13px;color:#595650}
+.menu a:hover,.menu a.active{color:#111}
+.hero{min-height:68vh;display:flex;align-items:center;padding:95px 0 80px}
+.heroSingle{text-align:center}
+.heroCopy{max-width:900px;margin:auto}
+.eyebrow,.toolLabel,.role{font-size:11px;font-weight:900;letter-spacing:3px;color:#57544e}
+.hero h1{font-size:clamp(48px,8vw,92px);line-height:.98;letter-spacing:-5px;margin:22px 0}
+.hero h1 span,.article h1 span,.servicesPage h1 span,.formPage h1 span,.chatPage h1 span{font-weight:500}
+.hero p{font-size:19px;color:var(--muted)}
+.actions{display:flex;justify-content:center;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid #bbb6ae;background:var(--surface);color:var(--ink);padding:13px 20px;border-radius:12px;font-weight:800;transition:transform .25s ease,background .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px);border-color:#777}
+.btn.primary{background:#161616;color:#fff;border-color:#161616}
+.reveal-up{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.homeTools{padding:10px 0 110px}
+.toolLabel{margin-bottom:10px}
+.servicesLabel{margin-top:42px}
+.aiEntry,.serviceBar{display:flex;align-items:center;justify-content:space-between;width:100%;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:17px 20px;color:#77736c;box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease}
+.aiEntry:hover,.serviceBar:hover{transform:translateY(-3px);border-color:#aaa59d}
+.sendIcon{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#171717;color:#fff;font-weight:900}
+.serviceBar{color:var(--ink);font-weight:850}
+.serviceBar span,.serviceChoice span{font-size:20px}
+.article{max-width:1040px;margin:auto;padding:90px 24px 100px}
+.article h1,.servicesPage h1,.formPage h1,.chatPage h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-3px;margin:16px 0 55px}
+.profileLayout{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:start}
+.profilePhoto{position:sticky;top:105px;border-radius:22px;overflow:hidden;background:#171717;box-shadow:var(--shadow)}
+.profilePhoto img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+.profileContent{display:grid;gap:34px}
+.infoBlock{padding-bottom:34px;border-bottom:1px solid var(--line)}
+.infoBlock:last-child{border-bottom:0}
+.infoBlock h2{font-size:29px;line-height:1.15;letter-spacing:-1px;margin:9px 0 12px}
+.infoBlock p{color:var(--muted);font-size:16px}
+.servicesPage,.formPage,.successPage,.chatPage{min-height:calc(100vh - 77px);padding:90px 0 100px}
+.serviceWrap{max-width:900px}
+.serviceChoices{display:grid;gap:18px}
+.serviceChoice{display:flex;align-items:center;justify-content:space-between;width:100%;padding:23px 25px;border:1px solid var(--line);background:var(--surface);border-radius:14px;font-size:20px;font-weight:850;box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease}
+.serviceChoice:hover{transform:translateY(-4px);border-color:#aaa59d}
+.formWrap{max-width:760px}
+.requestForm{display:grid;gap:19px}
+.requestForm label{display:grid;gap:8px;font-size:13px;font-weight:800}
+.requestForm input,.requestForm textarea,.requestForm select{width:100%;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:14px 15px;border-radius:12px;outline:none}
+.requestForm textarea{min-height:145px;resize:vertical}
+.requestForm input:focus,.requestForm textarea:focus,.requestForm select:focus{border-color:#777}
+.requestForm .btn{margin-top:6px;width:100%}
+.otherWrap{margin-top:-6px}
+.reviewBox{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.reviewRow{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.reviewRow:last-child{border-bottom:0}
+.reviewLabel{font-size:12px;font-weight:900;letter-spacing:1px;color:#6e6a63;text-transform:uppercase}
+.reviewValue{white-space:pre-wrap}
+.reviewActions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.error{margin-top:12px;color:#8b2020;font-size:14px}
+.successPage{display:grid;place-items:center;text-align:center}
+.successBox{max-width:700px}
+.successBox h1{font-size:clamp(42px,6vw,68px);line-height:1.02;letter-spacing:-3px;margin:18px 0}
+.successBox p{color:var(--muted);font-size:18px;margin-bottom:28px}
+.chatWrap{max-width:820px}
+.chatMessages{min-height:440px;max-height:58vh;overflow:auto;padding:25px 0;display:grid;gap:14px}
+.userMessage,.assistantMessage{max-width:78%;padding:13px 16px;border-radius:16px;border:1px solid var(--line);white-space:pre-wrap}
+.assistantMessage{justify-self:start;background:var(--surface)}
+.userMessage{justify-self:end;background:#171717;color:#fff;border-color:#171717}
+.chatComposer{position:sticky;bottom:18px;display:flex;align-items:flex-end;gap:8px;padding:8px 8px 8px 17px;background:var(--surface);border:1px solid #c9c4bc;border-radius:18px;box-shadow:0 18px 55px rgba(0,0,0,.12)}
+.chatComposer textarea{flex:1;resize:none;border:0;outline:0;background:transparent;color:var(--ink);padding:8px 0;max-height:150px}
+.sendButton{width:40px;height:40px;border:0;border-radius:50%;background:#171717;color:#fff;font-size:20px;display:grid;place-items:center}
+.sendButton:disabled{opacity:.35;cursor:not-allowed}
+.chatStatus{font-size:12px;color:#817d76;margin-top:12px;text-align:center}
+footer{border-top:1px solid var(--line);padding:27px 0;color:#77736c;text-align:center;font-size:12px}
+@media(max-width:800px){
+  .nav{height:68px}
+  .menu{display:none}
+  .hero{min-height:62vh;padding:80px 0 60px}
+  .hero h1{letter-spacing:-3px}
+  .article,.servicesPage,.formPage,.successPage,.chatPage{padding-top:65px}
+  .profileLayout{grid-template-columns:1fr;gap:40px}
+  .profilePhoto{position:relative;top:auto;max-width:520px;margin:auto}
+  .article h1,.servicesPage h1,.formPage h1,.chatPage h1{margin-bottom:38px}
+  .reviewRow{grid-template-columns:1fr;gap:5px}
+  .chatMessages{min-height:390px}
+  .userMessage,.assistantMessage{max-width:88%}
+}
+
+
+/* ===== Alpha AI chat interface ===== */
+.alphaChatPage{
+  min-height:100vh;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  padding:0;
+  background:var(--bg);
+}
+.alphaHeader{
+  height:76px;
+  flex:0 0 76px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:0 24px;
+  border-bottom:1px solid var(--line);
+  background:rgba(244,241,235,.9);
+  backdrop-filter:blur(18px);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.alphaBrand{
+  justify-self:start;
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:-.6px;
+}
+.alphaTitle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  font-size:15px;
+  font-weight:850;
+  letter-spacing:-.2px;
+}
+.alphaLogo{
+  position:relative;
+  width:25px;
+  height:25px;
+  display:inline-block;
+  flex:0 0 25px;
+}
+.alphaLogoCore{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:6px;
+  height:6px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:#171717;
+  box-shadow:0 0 0 3px rgba(23,23,23,.06);
+}
+.alphaLogoArc{
+  position:absolute;
+  inset:2px;
+  border:2px solid #171717;
+  border-radius:58% 42% 58% 42%;
+  transform:rotate(45deg);
+}
+.alphaLogoArcTwo{
+  inset:5px 2px;
+  border-width:1.5px;
+  border-left-color:transparent;
+  border-bottom-color:transparent;
+  transform:rotate(-45deg);
+}
+.alphaHeaderSpacer{min-width:1px}
+
+.alphaConversation{
+  flex:1 1 auto;
+  min-height:0;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scroll-behavior:smooth;
+}
+.alphaConversation::-webkit-scrollbar{width:7px}
+.alphaConversation::-webkit-scrollbar-thumb{background:#c9c4bc;border-radius:99px}
+.chatMessages{
+  width:min(820px,calc(100% - 32px));
+  min-height:100%;
+  max-height:none;
+  margin:0 auto;
+  padding:28px 0 150px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+.userMessage,.assistantMessage{
+  max-width:78%;
+  padding:0;
+  border:0;
+  border-radius:0;
+  white-space:pre-wrap;
+  line-height:1.7;
+  box-shadow:none;
+}
+.assistantMessage{
+  align-self:flex-start;
+  background:transparent;
+}
+.userMessage{
+  align-self:flex-end;
+  background:#171717;
+  color:#fff;
+  border-radius:18px;
+  padding:11px 15px;
+}
+.alphaComposerArea{
+  flex:0 0 auto;
+  width:min(820px,calc(100% - 32px));
+  margin:0 auto;
+  padding:0 0 20px;
+  position:relative;
+  z-index:15;
+}
+.chatComposer{
+  position:relative;
+  bottom:auto;
+  width:100%;
+  display:flex;
+  align-items:flex-end;
+  gap:8px;
+  padding:9px 9px 9px 17px;
+  background:var(--surface);
+  border:1px solid #c9c4bc;
+  border-radius:20px;
+  box-shadow:0 12px 40px rgba(0,0,0,.10);
+}
+.chatComposer textarea{
+  min-height:40px;
+  max-height:150px;
+  line-height:1.45;
+}
+.sendButton{
+  flex:0 0 40px;
+}
+.chatStatus{
+  margin:7px 0 0;
+  font-size:11px;
+  color:#817d76;
+  text-align:center;
+}
+
+/* Alpha loading mark: glow travels around the mark instead of showing "Thinking...". */
+.alphaThinking{
+  width:27px;
+  height:27px;
+  position:relative;
+  display:inline-block;
+  vertical-align:middle;
+  opacity:.45;
+  animation:alphaBreath 1.7s ease-in-out infinite;
+}
+.alphaThinking .alphaLogoCore{
+  width:5px;
+  height:5px;
+}
+.alphaThinking .alphaLogoArc{
+  border-color:#171717;
+}
+.alphaThinking .alphaLogoArcTwo{
+  border-left-color:transparent;
+  border-bottom-color:transparent;
+}
+.alphaThinking::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:50%;
+  background:conic-gradient(from 0deg,transparent 0 62%,rgba(23,23,23,.8) 72%,transparent 82% 100%);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+  mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 0);
+  animation:alphaSpin 1.15s linear infinite;
+}
+@keyframes alphaSpin{to{transform:rotate(360deg)}}
+@keyframes alphaBreath{
+  0%,100%{opacity:.3;filter:brightness(.85)}
+  50%{opacity:1;filter:brightness(1.35);transform:scale(1.04)}
+}
+
+@media(max-width:800px){
+  .alphaHeader{
+    height:64px;
+    flex-basis:64px;
+    padding:0 17px;
+  }
+  .alphaBrand{font-size:20px}
+  .alphaTitle{font-size:14px}
+  .alphaConversation .chatMessages{
+    width:calc(100% - 28px);
+    padding-top:22px;
+    padding-bottom:130px;
+  }
+  .alphaComposerArea{
+    width:calc(100% - 28px);
+    padding-bottom:12px;
+  }
+  .userMessage,.assistantMessage{max-width:88%}
+}
