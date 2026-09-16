@@ -184,11 +184,12 @@ function initChat(){
       if(!response.ok) throw new Error(result.error || "AI request failed.");
       thinking.textContent = result.text || "I could not generate a response.";
       status.textContent = "Ready";
-    }catch(err){
-      console.error(err);
-      thinking.textContent = "The AI service is not configured yet. Deploy the Supabase Edge Function and add the Gemini API key as a Supabase secret.";
-      status.textContent = "AI service configuration required.";
-    }
+    }{
+          }catch(err){
+      console.error("AI chat error:", err);
+      thinking.textContent = `AI Error: ${err.message || "Unknown error"}`;
+      status.textContent = "AI service error.";
+        }
     messages.scrollTop = messages.scrollHeight;
   });
 }
